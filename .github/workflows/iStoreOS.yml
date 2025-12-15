@@ -96,9 +96,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        target: [Immortalwrt]
+        target: [iStoreOS]
         
-        # 请勿对 target: [Immortalwrt] 做任何修改
+        # 请勿对 target: [iStoreOS] 做任何修改
         
     steps:
     - name: 准备结束
