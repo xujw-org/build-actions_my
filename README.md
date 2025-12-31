@@ -256,7 +256,7 @@ CONFIG_TARGET_armsr_armv8_DEVICE_generic=y
 
  ### 鸣谢！
  感谢以下各位大佬（排名无分先后）<br />
- 
+ [`istoreos`](https://github.com/istoreos/istoreos)
  [`coolsnowwolf`](https://github.com/coolsnowwolf/lede)
  [`Lienol`](https://github.com/Lienol/openwrt)
  [`immortalwrt`](https://github.com/immortalwrt/immortalwrt)
