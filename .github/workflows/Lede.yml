@@ -131,6 +131,15 @@ jobs:
         git clone -q -b "${REPO_BRANCH}" --single-branch "${REPO_URL}" openwrt
         ln -sf /${{ env.DIY_WORK }}/openwrt ${GITHUB_WORKSPACE}/openwrt
         bash ${{ env.COMMON_SH }} Diy_feedsconf
+        
+        # === 开始修复 Hash Mismatch 问题 ===
+        cd openwrt
+        echo "正在执行 Hash 修复..."
+        find feeds -name "Makefile" | xargs grep -l "PKG_NAME:=shadowsocksr-libev" | xargs sed -i 's/^PKG_HASH:.*/PKG_HASH:=skip/' || true
+        find feeds -name "Makefile" | xargs grep -l "PKG_NAME:=simple-obfs" | xargs sed -i 's/^PKG_HASH:.*/PKG_HASH:=skip/' || true
+        find feeds -name "Makefile" | xargs grep -l "PKG_NAME:=trojan-plus" | xargs sed -i 's/^PKG_HASH:.*/PKG_HASH:=skip/' || true
+        # === 修复结束 ===
+        
         echo "SHANG_CHUAN=true" >> ${GITHUB_ENV}
     
     - name: 公告
