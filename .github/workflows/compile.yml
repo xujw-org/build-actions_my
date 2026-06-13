@@ -56,8 +56,7 @@ jobs:
         DEBIAN_FRONTEND: noninteractive
       run: |
         sudo bash -c 'bash <(curl -fsSL https://github.com/xujw-org/common/raw/main/custom/ubuntu.sh)'
-        sudo apt install llvm npm dwarves -y
-        sudo npm install -g pnpm
+        sudo apt install llvm dwarves -y
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /${{ env.DIY_WORK }}
         sudo chown ${USER}:${GROUPS} /${{ env.DIY_WORK }}
