@@ -19,7 +19,6 @@ CONFIG_OPENVPN_openssl_ENABLE_MANAGEMENT=y
 CONFIG_OPENVPN_openssl_ENABLE_PORT_SHARE=y
 CONFIG_OPENVPN_openssl_ENABLE_SMALL=y
 CONFIG_PACKAGE_auto-scripts=y
-# CONFIG_PACKAGE_autosamba is not set
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_blkid=y
 CONFIG_PACKAGE_boost=y
@@ -40,12 +39,19 @@ CONFIG_PACKAGE_haproxy=y
 CONFIG_PACKAGE_ipt2socks=y
 CONFIG_PACKAGE_kmod-crypto-acompress=y
 CONFIG_PACKAGE_kmod-crypto-blake2b=y
+CONFIG_PACKAGE_kmod-crypto-ccm=y
 CONFIG_PACKAGE_kmod-crypto-chacha20poly1305=y
+CONFIG_PACKAGE_kmod-crypto-cmac=y
+CONFIG_PACKAGE_kmod-crypto-des=y
 CONFIG_PACKAGE_kmod-crypto-lib-chacha20=y
 CONFIG_PACKAGE_kmod-crypto-lib-poly1305=y
 CONFIG_PACKAGE_kmod-crypto-md4=y
+CONFIG_PACKAGE_kmod-crypto-md5=y
 CONFIG_PACKAGE_kmod-crypto-xxhash=y
+CONFIG_PACKAGE_kmod-fs-ksmbd=y
 CONFIG_PACKAGE_kmod-fs-msdos=y
+CONFIG_PACKAGE_kmod-fs-netfs=y
+CONFIG_PACKAGE_kmod-fs-smbfs-common=y
 CONFIG_PACKAGE_kmod-inet-diag=y
 CONFIG_PACKAGE_kmod-ipt-physdev=y
 CONFIG_PACKAGE_kmod-lib-lzo=y
@@ -56,9 +62,11 @@ CONFIG_PACKAGE_kmod-netlink-diag=y
 CONFIG_PACKAGE_kmod-nls-cp932=y
 CONFIG_PACKAGE_kmod-nls-cp936=y
 CONFIG_PACKAGE_kmod-nls-cp950=y
+CONFIG_PACKAGE_kmod-nls-ucs2-utils=y
 CONFIG_PACKAGE_kmod-ovpn-backports=y
 CONFIG_PACKAGE_kmod-udptunnel4=y
 CONFIG_PACKAGE_kmod-udptunnel6=y
+CONFIG_PACKAGE_ksmbd-server=y
 CONFIG_PACKAGE_libatomic=y
 CONFIG_PACKAGE_libattr=y
 # CONFIG_PACKAGE_libcares is not set
@@ -68,6 +76,8 @@ CONFIG_PACKAGE_liblua5.3=y
 CONFIG_PACKAGE_liblua5.4=y
 CONFIG_PACKAGE_liblz4=y
 CONFIG_PACKAGE_libnetsnmp=y
+CONFIG_PACKAGE_libnl-core=y
+CONFIG_PACKAGE_libnl-genl=y
 CONFIG_PACKAGE_libparted=y
 # CONFIG_PACKAGE_libpcap is not set
 CONFIG_PACKAGE_libruby=y
@@ -82,6 +92,7 @@ CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_luci-app-ksmbd=y
 CONFIG_PACKAGE_luci-app-lucky=y
 CONFIG_PACKAGE_luci-app-openclash=y
 CONFIG_PACKAGE_luci-app-openvpn-server=y
@@ -96,6 +107,7 @@ CONFIG_PACKAGE_luci-app-partexp=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs is not set
 CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-frpc-zh-cn=y
+CONFIG_PACKAGE_luci-i18n-ksmbd-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-lucky-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-openvpn-server-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-partexp-zh-cn=y
@@ -136,6 +148,7 @@ CONFIG_PACKAGE_socat=y
 CONFIG_PACKAGE_ucode-mod-socket=y
 CONFIG_PACKAGE_unzip=y
 CONFIG_PACKAGE_v2ray-plugin=y
+CONFIG_PACKAGE_wsdd2=y
 # CONFIG_PACKAGE_xray-core is not set
 CONFIG_PARTED_READLINE=y
 CONFIG_RUBY_ENABLE_YJIT=y
@@ -150,52 +163,3 @@ CONFIG_boost-compile-visibility-hidden=y
 CONFIG_boost-runtime-shared=y
 CONFIG_boost-static-and-shared-libs=y
 CONFIG_boost-variant-release=y
-CONFIG_PACKAGE_kmod-crypto-ccm=y
-CONFIG_PACKAGE_kmod-crypto-cmac=y
-CONFIG_PACKAGE_kmod-crypto-des=y
-CONFIG_PACKAGE_kmod-crypto-md5=y
-CONFIG_PACKAGE_kmod-fs-ksmbd=y
-CONFIG_PACKAGE_kmod-fs-netfs=y
-CONFIG_PACKAGE_kmod-fs-smbfs-common=y
-CONFIG_PACKAGE_kmod-nls-ucs2-utils=y
-CONFIG_PACKAGE_ksmbd-server=y
-CONFIG_PACKAGE_luci-app-ksmbd=y
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ar is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-bg is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-bn is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ca is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-cs is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-da is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-de is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-el is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-es is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-fa is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-fi is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-fr is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ga is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-he is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-hi is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-hu is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-it is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ja is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ko is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-lt is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-mr is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ms is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-nl is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-no is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-pl is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-pt is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-pt-br is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ro is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ru is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-sk is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-sv is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-ta is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-tr is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-uk is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-vi is not set
-# CONFIG_PACKAGE_luci-i18n-ksmbd-yua is not set
-CONFIG_PACKAGE_luci-i18n-ksmbd-zh-cn=y
-# CONFIG_PACKAGE_luci-i18n-ksmbd-zh-tw is not set
-CONFIG_PACKAGE_wsdd2=y
